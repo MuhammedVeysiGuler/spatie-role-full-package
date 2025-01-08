@@ -17,7 +17,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "BabaSultan23\\SpatieRoleFullCode\\SpatieRoleFullCodeServiceProvider"
+        "SpatieRoleFullCode\\SpatieRoleFullCodeServiceProvider"
       ]
     }
   },
