@@ -1,6 +1,6 @@
 <?php
 
-namespace BabaSultan23\SpatieRoleFullCode;
+namespace SpatieRoleFullCode;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,17 +20,6 @@ class SpatieRoleFullCodeServiceProvider extends ServiceProvider
         }
     }
 
-    protected function mergeRoutes()
-    {
-        // Mevcut web.php dosyasına route ekle
-        $routeFile = base_path('routes/web.php');
-
-        if (file_exists($routeFile)) {
-            $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
-        } else {
-            $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
-        }
-    }
 
     public function boot()
     {
@@ -47,15 +36,17 @@ class SpatieRoleFullCodeServiceProvider extends ServiceProvider
 
         // Controller dosyalarını yayınlamak
         $this->publishes([
-            __DIR__ . '/../src/Controller' => app_path('Http/Controllers/BabaSultan23/SpatieRoleFullCode'),
+            __DIR__ . '/../src/Controller' => app_path('Http/Controllers'),
         ], 'controllers');
 
         // Helper dosyalarını yayınlamak
         $this->publishes([
-            __DIR__ . '/../src/Helper' => app_path('Helper/BabaSultan23/SpatieRoleFullCode'),
+            __DIR__ . '/../src/Helper' => app_path('Helper'),
         ], 'helpers');
 
-        // Route dosyalarını yüklemek (mevcut route dosyasına ekleme yapma)
-        $this->mergeRoutes();
+        // Route dosyalarını yayımlamak
+        $this->publishes([
+            __DIR__ . '/../routes/web.php' => base_path('routes/web.php'),
+        ], 'routes');
     }
 }

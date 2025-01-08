@@ -1,6 +1,6 @@
 <?php
 
-use BabaSultan23\SpatieRoleFullCode\Controller\RoleController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 

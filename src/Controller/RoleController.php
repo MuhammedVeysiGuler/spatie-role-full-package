@@ -1,9 +1,9 @@
 <?php
 
-namespace BabaSultan23\SpatieRoleFullCode\Controller;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use BabaSultan23\SpatieRoleFullCode\Helper\Permission\Permission as HelperPermission;
+use App\Helper\Permission\Permission as HelperPermission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Lang;
 use Spatie\Permission\Models\Role;

@@ -1,6 +1,6 @@
 <?php
 
-namespace BabaSultan23\SpatieRoleFullCode\Helper\Permission;
+namespace App\Helper\Permission;
 
 class Permission {
     protected $permissions = [
