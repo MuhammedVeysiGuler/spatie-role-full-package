@@ -1,0 +1,23 @@
+{
+  "name": "babasultan23/spatie-role-full-code",
+  "description": "Spatie kullanarak rol yapısının full hali.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "BabaSultan23",
+      "email": "m.veysiguler@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BabaSultan23\\SpatieRoleFullCode\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.3|^8.0",
+    "spatie/laravel-permission": "^5.0",
+    "yajra/laravel-datatables-oracle": "^10.0"
+  }
+}
