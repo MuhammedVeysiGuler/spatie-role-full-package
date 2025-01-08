@@ -1,0 +1,1 @@
+# spatie-role-full-package
