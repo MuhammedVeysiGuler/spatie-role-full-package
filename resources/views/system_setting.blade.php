@@ -14,7 +14,7 @@
                     </div>
                 @endif
 
-{{--                yeni eklemeler bu kısıma--}}
+                {{--                yeni eklemeler bu kısıma--}}
             </div>
         </div>
     </div>

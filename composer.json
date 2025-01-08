@@ -1,6 +1,6 @@
 {
   "name": "babasultan23/spatie-role-full-code",
-  "description": "Spatie kullanarak rol yapısının full hali.",
+  "description": "This package provides dynamic role management with user interface screens using Spatie & YajraBox",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -12,6 +12,13 @@
   "autoload": {
     "psr-4": {
       "BabaSultan23\\SpatieRoleFullCode\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BabaSultan23\\SpatieRoleFullCode\\SpatieRoleFullCodeServiceProvider"
+      ]
     }
   },
   "minimum-stability": "dev",
