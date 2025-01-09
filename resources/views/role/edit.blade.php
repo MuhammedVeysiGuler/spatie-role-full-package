@@ -1,8 +1,17 @@
-@extends('spatie-role-full-code::dashboard')
+@extends('spatie-role-full-code.dashboard')
 @section('content')
     <div class="content-page">
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="content">
-            <div class="row">@include('spatie-role-full-code::system_setting')</div>
+            <div class="row">@include('spatie-role-full-code.system_setting')</div>
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-sm-6 portlets">

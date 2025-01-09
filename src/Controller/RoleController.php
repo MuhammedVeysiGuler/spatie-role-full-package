@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Helper\Permission\Permission as HelperPermission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Lang;
@@ -14,7 +13,7 @@ class RoleController extends Controller
 
     public function index()
     {
-        return view('spatie-role-full-code::role.index');
+        return view('spatie-role-full-code.role.index');
     }
 
     public function fetch()
@@ -43,7 +42,7 @@ class RoleController extends Controller
     public function create()
     {
         $permissions = new HelperPermission();
-        return view('spatie-role-full-code::role.create', compact('permissions'));
+        return view('spatie-role-full-code.role.create', compact('permissions'));
     }
 
     public function store(Request $request)
@@ -82,7 +81,7 @@ class RoleController extends Controller
         $role = Role::findById($id);
         $permissions = new HelperPermission();
 
-        return view('spatie-role-full-code::role.edit', compact('role', 'permissions'));
+        return view('spatie-role-full-code.role.edit', compact('role', 'permissions'));
     }
 
     public function update(Request $request, $id)

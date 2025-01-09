@@ -1,8 +1,8 @@
-@extends('spatie-role-full-code::dashboard')
+@extends('spatie-role-full-code.dashboard')
 @section('content')
     <div class="content-page">
         <div class="content">
-            <div class="row">@include('spatie-role-full-code::system_setting')</div>
+            <div class="row">@include('spatie-role-full-code.system_setting')</div>
             <div class="container-fluid pt-5">
                 <!-- TO DO List -->
                 <div class="card">
