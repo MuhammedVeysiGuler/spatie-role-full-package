@@ -22,18 +22,27 @@ açıklamaktadır. Paket, **Spatie Laravel Permission** ve **Yajra Laravel Datat
    ```bash
    php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
    php artisan vendor:publish --tag=datatables
-
+   
+**ROUTE TANIMLAMASI** 
+- Route tanımlaması için proje dizininizde yer alan `app/Providers/RouteServiceProvider.php` dosyasını açarak aşağıdaki eklemeyi yapınız:
+- - ```
+    public function boot()
+    { 
+      ...
+      ...
+    
+      $this->loadRoutesFrom(base_path('routes/spatie_role_routes.php'));
+    
+    }
 4. **Migrasyonları Çalıştırın**
 
    ```bash
    php artisan migrate
 
-5. **Rol için Seeder Çalıştırın**
-
+5. **Rol için Seeder Çalıştırın**<br>
+   **Seeder'ı çalıştırmadan önce kendinize göre ayarlayınız !!**
    ```bash
    php artisan db:seed --class=PermissionSeeder
-
-**Seeder'ı çalıştırmadan önce kendinize göre ayarlayınız !!**
 
 ----
 

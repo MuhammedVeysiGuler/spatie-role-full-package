@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Helpers\Permission\Permission as HelperPermission;
+use App\Helper\Permission\Permission as HelperPermission;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;

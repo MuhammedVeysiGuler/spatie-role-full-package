@@ -22,10 +22,10 @@ class SpatieRoleFullCodeServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        // View dosyalarını yayınlamak
+        // View dosyalarını publish etmeden kullanmak için
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'spatie-role-full-code');
 
-        // Route dosyalarını yüklemek
+        // Route dosyalarını publish etmeden kullanmak için
         //$this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
         $this->publishes([
@@ -44,7 +44,7 @@ class SpatieRoleFullCodeServiceProvider extends ServiceProvider
 
         // Route dosyalarını yayımlamak
         $this->publishes([
-            __DIR__ . '/../routes/web.php' => base_path('routes/spatie-role-full-code.php'),
+            __DIR__ . '/../routes/web.php' => base_path('routes/spatie_role_routes.php'),
         ], 'routes');
 
         $this->publishes([

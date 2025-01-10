@@ -13,9 +13,6 @@
     "psr-4": {
       "SpatieRoleFullCode\\": "src/"
     },
-    "classmap": [
-      "src/database/seeders"
-    ]
   },
   "extra": {
     "laravel": {
